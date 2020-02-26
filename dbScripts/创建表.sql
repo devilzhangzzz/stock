@@ -1,20 +1,3 @@
-/*
-Navicat MySQL Data Transfer
-
-Source Server         : localhost
-Source Server Version : 80016
-Source Host           : localhost:3306
-Source Database       : stock
-
-Target Server Type    : MYSQL
-Target Server Version : 80016
-File Encoding         : 65001
-
-Date: 2020-02-26 17:17:28
-*/
-
-SET FOREIGN_KEY_CHECKS=0;
-
 -- ----------------------------
 -- Table structure for t_day_trend
 -- ----------------------------
@@ -57,7 +40,7 @@ CREATE TABLE `t_hammer_grown` (
   `days_diff` int(11) DEFAULT NULL,
   `relative_grown_rate` double DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB ;
 
 -- ----------------------------
 -- Table structure for t_stock
@@ -65,9 +48,9 @@ CREATE TABLE `t_hammer_grown` (
 DROP TABLE IF EXISTS `t_stock`;
 CREATE TABLE `t_stock` (
   `id` int(11) NOT NULL,
-  `stock_no` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `stock_short_no` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `stock_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `board` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `stock_no` varchar(255)  DEFAULT NULL,
+  `stock_short_no` varchar(255)  DEFAULT NULL,
+  `stock_name` varchar(255)  DEFAULT NULL,
+  `board` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB ;
