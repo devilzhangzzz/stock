@@ -27,7 +27,7 @@ CREATE TABLE `t_day_trend` (
   `kdjj` double DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE KEY `idx_st` (`stock_id`,`time`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=11640149 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Table structure for t_hammer_grown
