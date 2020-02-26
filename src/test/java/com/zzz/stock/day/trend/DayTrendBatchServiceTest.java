@@ -35,7 +35,7 @@ public class DayTrendBatchServiceTest {
     @Test
     public void xunhuanInsertUnInsertStocksDayTrends(){
         this.dayTrendBatchService.insertUnInsertStocksDayTrends();
-        List<DayTrend> dayTrends = this.dayTrendRepo.findDayTrendByStockId(954);
+        List<DayTrend> dayTrends = this.dayTrendRepo.findDayTrendsByStockId(954);
         if (dayTrends.size() == 0) {
             this.xunhuanInsertUnInsertStocksDayTrends();
         }

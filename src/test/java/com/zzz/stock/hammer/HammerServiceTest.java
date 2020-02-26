@@ -1,5 +1,7 @@
 package com.zzz.stock.hammer;
 
+import cn.hutool.core.date.DateTime;
+import cn.hutool.core.date.DateUtil;
 import com.zzz.stock.entity.DayTrend;
 import com.zzz.stock.repo.DayTrendRepo;
 import com.zzz.stock.service.HammerService;
@@ -21,7 +23,14 @@ public class HammerServiceTest {
 
     @Test
     public void updateHammerDayTrend() {
-        this.hammerService.updateHammerDayTrend(954);
+        this.hammerService.updateHammerDayTrend(1666);
+    }
+
+    @Test
+    public void updateHammerDayTrendBetweenTimes() {
+        DateTime start = DateUtil.parse("2020-02-17", "yyyy-MM-dd");
+        DateTime end = DateUtil.parse("2020-02-18", "yyyy-MM-dd");
+        this.hammerService.updateHammerDayTrendBetweenTimes(start.getTime() , end.getTime());
     }
 
     @Test

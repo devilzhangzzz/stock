@@ -43,6 +43,13 @@ public abstract class MathUtils {
         return Arrays.stream(nums).max().getAsLong();
     }
 
+    public static double avg(double... nums) {
+        if(nums.length == 0) {
+            throw new UnsupportedOperationException();
+        }
+        return Arrays.stream(nums).average().getAsDouble();
+    }
+
     /**
      * a相对于b百分增长值
      * @param a

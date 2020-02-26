@@ -24,7 +24,7 @@ public class HammerGrownService {
 
 
     public void saveHammerGrowns(Integer stockId) {
-        List<DayTrend> dayTrends = this.dayTrendRepo.findDayTrendByStockId(stockId);
+        List<DayTrend> dayTrends = this.dayTrendRepo.findDayTrendsByStockId(stockId);
         if (dayTrends.isEmpty()) {
             return;
         }
